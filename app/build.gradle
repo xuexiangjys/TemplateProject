@@ -66,8 +66,8 @@ dependencies {
     implementation 'com.github.xuexiangjys.XPage:xpage-lib:2.2.2'
     annotationProcessor 'com.github.xuexiangjys.XPage:xpage-compiler:2.2.2'
     //ButterKnife的sdk
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation deps.butterknife.runtime
+    annotationProcessor deps.butterknife.compiler
     //如果开启了内存泄漏监测leak,就需要加上这个依赖
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
