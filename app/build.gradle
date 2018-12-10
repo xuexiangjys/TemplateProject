@@ -63,13 +63,13 @@ dependencies {
     implementation 'com.github.xuexiangjys.XAOP:xaop-runtime:1.0.1'  //添加依赖
 
     //XPage
-    implementation 'com.github.xuexiangjys.XPage:xpage-lib:2.2.2'
-    annotationProcessor 'com.github.xuexiangjys.XPage:xpage-compiler:2.2.2'
+    implementation 'com.github.xuexiangjys.XPage:xpage-lib:2.2.4'
+    annotationProcessor 'com.github.xuexiangjys.XPage:xpage-compiler:2.2.4'
     //ButterKnife的sdk
     implementation deps.butterknife.runtime
     annotationProcessor deps.butterknife.compiler
     //如果开启了内存泄漏监测leak,就需要加上这个依赖
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
 }
