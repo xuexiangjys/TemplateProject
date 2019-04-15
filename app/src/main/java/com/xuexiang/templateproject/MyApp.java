@@ -34,7 +34,7 @@ public class MyApp extends Application {
      */
     private void initLibs() {
         XUtil.init(this);
-        XUtil.debug(true);
+        XUtil.debug(BuildConfig.DEBUG);
 
         PageConfig.getInstance().setPageConfiguration(new PageConfiguration() { //页面注册
             @Override
@@ -44,7 +44,7 @@ public class MyApp extends Application {
         }).debug("PageLog").enableWatcher(true).init(this);
 
         XAOP.init(this); //初始化插件
-        XAOP.debug(true); //日志打印切片开启
+        XAOP.debug(BuildConfig.DEBUG); //日志打印切片开启
         //设置动态申请权限切片 申请权限被拒绝的事件响应监听
         XAOP.setOnPermissionDeniedListener(new PermissionUtils.OnPermissionDeniedListener() {
             @Override
