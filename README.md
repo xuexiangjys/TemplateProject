@@ -31,6 +31,12 @@ git clone https://github.com/xuexiangjys/TemplateProject.git
 
 ![](https://github.com/xuexiangjys/Resource/blob/master/img/templateproject/5.png)
 
+## 项目打包
+
+1.修改工程根目录的`gradle.properties`中的`isNeedPackage=true`。
+
+2.添加并配置keystore，在`versions.gradle`中修改`app_release`相关参数。
+
 ## Android Studio模版
 
 [详情点击查看](https://github.com/xuexiangjys/AndroidStudioTemplates)
