@@ -37,6 +37,10 @@ git clone https://github.com/xuexiangjys/TemplateProject.git
 
 2.添加并配置keystore，在`versions.gradle`中修改`app_release`相关参数。
 
+## 更多模板
+
+* [模版空壳Android工程，快速搭建（集成了XUI、XUtil、XAOP、XPage、XUpdate和XHttp2)](https://github.com/xuexiangjys/TemplateAppProject)
+
 ## Android Studio模版
 
 [详情点击查看](https://github.com/xuexiangjys/AndroidStudioTemplates)
