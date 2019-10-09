@@ -30,14 +30,14 @@ import com.xuexiang.xutil.common.ClickUtils;
  * @author xuexiang
  * @since 2018/11/7 下午1:16
  */
-@Page(name = "模版程序", anim = CoreAnim.none)
+@Page(name = "模版程序\n写Demo真方便", anim = CoreAnim.none)
 public class MainFragment extends XPageContainerListFragment {
 
     @Override
     protected Class[] getPagesClasses() {
         return new Class[] {
                 //此处填写fragment
-
+                FirstFragment.class
         };
     }
 
