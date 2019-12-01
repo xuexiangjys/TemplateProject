@@ -52,7 +52,7 @@ public class MyApp extends Application {
      */
     private void initLibs() {
         XUtil.init(this);
-        XUtil.debug(BuildConfig.DEBUG);
+        XUtil.debug(MyApp.isDebug());
 
         PageConfig.getInstance().setPageConfiguration(new PageConfiguration() { //页面注册
             @Override
@@ -62,7 +62,7 @@ public class MyApp extends Application {
         }).debug("PageLog").enableWatcher(true).init(this);
 
         XAOP.init(this); //初始化插件
-        XAOP.debug(BuildConfig.DEBUG); //日志打印切片开启
+        XAOP.debug(MyApp.isDebug()); //日志打印切片开启
         //设置动态申请权限切片 申请权限被拒绝的事件响应监听
         XAOP.setOnPermissionDeniedListener(new PermissionUtils.OnPermissionDeniedListener() {
             @Override
@@ -73,10 +73,17 @@ public class MyApp extends Application {
         });
 
         // 这两行必须写在init之前，否则这些配置在init过程中将无效
-        if (BuildConfig.DEBUG) {
+        if (MyApp.isDebug()) {
             XRouter.openLog();     // 打印日志
             XRouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         }
         XRouter.init(this);
+    }
+
+    /**
+     * @return 当前运行环境是否是调试模式
+     */
+    public static boolean isDebug() {
+        return BuildConfig.DEBUG;
     }
 }
